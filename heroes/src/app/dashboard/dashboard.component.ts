@@ -7,10 +7,13 @@ import { Hero } from '../heroes/heroes';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
+
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
 
-  constructor(private heroService: HeroService) { }
+  constructor(
+    private heroService: HeroService,
+  ) { }
 
   ngOnInit(): void {
     this.getHeroes();
